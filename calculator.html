@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #calculator {
+            display: flex;
+            width: 235px;
+            height: 394px;
+            padding: 13px 11px;
+            align-items: center;
+            gap: 10px;
+            border-radius: 27px;
+            background: #D9D9D9;
+        }
+
+        #calculator-body {
+            display: flex;
+            width: 212px;
+            height: 367px;
+            padding: 14px 11px;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            border-radius: 27px;
+            background: #EFEFEF;
+            box-shadow: -156px 168px 64px 0px rgba(0, 0, 0, 0.00), -100px 108px 59px 0px rgba(0, 0, 0, 0.01), -56px 61px 50px 0px rgba(0, 0, 0, 0.05), -25px 27px 37px 0px rgba(0, 0, 0, 0.09), -6px 7px 20px 0px rgba(0, 0, 0, 0.10);
+        }
+
+        #display-button {
+            display: flex;
+            width: 210px;
+            height: 335px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 17px;
+            flex-shrink: 0;
+            align-self: center;
+            padding: 1px;
+        }
+
+        #display {
+            height: 89px;
+            flex-shrink: 0;
+            align-self: stretch;
+            border-radius: 19px;
+            background: #e9e9e9;
+            box-shadow: 3px 4px 6.8px -2px rgba(0, 0, 0, 0.25) inset;
+        }
+
+        #button-container {
+            display: grid;
+            row-gap: 5px;
+            column-gap: 5px;
+            flex: 1 0 0;
+            align-self: stretch;
+            grid-template-rows: repeat(5, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        #clear-button, #backspace, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine{
+            width: 41.218px;
+            height: 41.218px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            background: radial-gradient(50% 50% at 50% 50%, #D6D6D6 42.31%, #BABABA 100%);
+            text-align: center;
+            line-height: 41px;
+        }
+
+        #divide-button, #multiply-button, #subtract-button, #add-button, #decimal-button{
+            width: 41.218px;
+            height: 41.218px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            background: radial-gradient(50% 50% at 50% 50%, #FE9B21 0%, #EE882E 100%);
+            text-align: center;
+            line-height: 41px;
+        }
+
+        #zero {
+            width: 94px;
+            height: 41px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            background: radial-gradient(50% 50% at 50% 50%, #D6D6D6 42.31%, #BABABA 100%);
+            box-shadow: -6px 13px 4px 0px rgba(0, 0, 0, 0.00), -4px 8px 4px 0px rgba(0, 0, 0, 0.01), -2px 5px 3px 0px rgba(0, 0, 0, 0.05), -1px 2px 2px 0px rgba(0, 0, 0, 0.09), 0px 1px 1px 0px rgba(0, 0, 0, 0.10);           
+            text-align: center;
+            line-height: 41px;
+            grid-column: span 2;
+        }
+
+        #equals-button {
+            width: 41px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            background: radial-gradient(50% 50% at 50% 50%, #FE9B21 0%, #EE882E 100%);
+            box-shadow: -6px 13px 4px 0px rgba(0, 0, 0, 0.00), -4px 8px 4px 0px rgba(0, 0, 0, 0.01), -2px 5px 3px 0px rgba(0, 0, 0, 0.05), -1px 2px 2px 0px rgba(0, 0, 0, 0.09), 0px 1px 1px 0px rgba(0, 0, 0, 0.10);
+            text-align: center;
+            line-height: 88px;
+            grid-row: span 2;
+        }
+
+    </style>
+</head>
+<body>
+    <body>
+        <div id="calculator">
+            <div id="calculator-body">
+                <div id="display-button">
+                    <div id="display"></div>
+                    <div id="button-container">
+                        <div id="clear-button"><b>Ac</b></div>
+                        <div id="backspace">&#x21E6;</div>
+                        <div id="divide-button">/</div>
+                        <div id="multiply-button">*</div>
+                        <div id="seven">7</div>
+                        <div id="eight">8</div>
+                        <div id="nine">9</div>
+                        <div id="subtract-button">-</div>
+                        <div id="four">4</div>
+                        <div id="five">5</div>
+                        <div id="six">6</div>
+                        <div id="add-button">+</div>
+                        <div id="one">1</div>
+                        <div id="two">2</div>
+                        <div id="three">3</div>
+                        <div id="equals-button">=</div>
+                        <div id="zero">0</div>
+                        <div id="decimal-button">.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</body>
+</html>
